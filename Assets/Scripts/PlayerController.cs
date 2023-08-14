@@ -7,37 +7,36 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public GameManager gameManager;
 
-    private bool isRunning = false;
+    private bool isMoving = false;  // Bu deðiþken hareket durumunu kontrol etmek için kullanýlýr.
 
     private void Update()
     {
-        if (gameManager.isGreenLightActive)
-        {
-            HandleMovement();
-        }
+        HandleMovement();
     }
 
     private void HandleMovement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
 
+        // Space tuþuna basýldýðýnda sola doðru hareket baþlar.
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            isRunning = true;
+            isMoving = true;
         }
+        // Space tuþu býrakýldýðýnda hareket durur.
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            isRunning = false;
+            isMoving = false;
         }
 
-        if (isRunning)
+        if (isMoving)
         {
+            // Sola doðru hareket için yatay eksende -1 kullanýlýr.
             Vector3 movement = new Vector3(-1f, 0f, 0f) * moveSpeed * Time.deltaTime;
             transform.Translate(movement);
         }
     }
-
-    public void Die()
+        public void Die()
     {
         // Handle player death, animations, etc.
         gameManager.PlayerDied();
