@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -119,9 +119,127 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: FBpesCBX0AAqgZF__1_-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 74
+        width: 56
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7122bdc28b619e041a495430007b1041
+      internalID: -929966882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FBpesCBX0AAqgZF__1_-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 74
+        width: 61
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f4dc0402fa572469d7f95773d968e1
+      internalID: 1153909231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FBpesCBX0AAqgZF__1_-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 74
+        width: 53
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16c530d4b63def478f93d8ea6154b4a
+      internalID: 21879932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FBpesCBX0AAqgZF__1_-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 74
+        width: 54
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69064b3b7d6e26946a0937f9fd922c40
+      internalID: 1079699240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FBpesCBX0AAqgZF__1_-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 74
+        width: 65
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cf53f039acd1940a0c2ff9d1545fa6
+      internalID: 1706631483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +250,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FBpesCBX0AAqgZF__1_-removebg-preview_0: -929966882
+      FBpesCBX0AAqgZF__1_-removebg-preview_1: 1153909231
+      FBpesCBX0AAqgZF__1_-removebg-preview_2: 21879932
+      FBpesCBX0AAqgZF__1_-removebg-preview_3: 1079699240
+      FBpesCBX0AAqgZF__1_-removebg-preview_4: 1706631483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
