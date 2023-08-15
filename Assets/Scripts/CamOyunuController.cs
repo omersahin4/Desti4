@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class glassB : MonoBehaviour
+public class CamOyunuController : MonoBehaviour
 {
     public GameObject[] camSegments; // Referans to each cam segment
     public int maxLives = 3;
@@ -55,6 +55,6 @@ public class glassB : MonoBehaviour
         {
             // Reset position and continue
             // Reset cam selection for the new attempt
-        }
+        }
     }
 }
