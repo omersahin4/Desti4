@@ -2,16 +2,13 @@ using UnityEngine;
 
 public class MisketController : MonoBehaviour
 {
-    public Transform halkaDelik; // Halka deliðin transform bileþeni
-    public float maxCekmeMesafesi = 2.0f; // Misketi ne kadar geri çekebileceðimiz
-
     private bool isDragging = false;
+    private Vector3 offset;
     private Rigidbody2D rb;
     private SpringJoint2D springJoint;
-    private Vector2 dragStartPos;
-    private int atisHakki = 6;
-    private int can = 3;
-    private bool oyunBitti = false;
+
+    public float maxCekmeMesafesi = 2.0f; // Misketi ne kadar geri çekebileceðiniz
+    public float cekmeGucu = 5.0f; // Misketin çekilme gücü
 
     private void Start()
     {
@@ -22,14 +19,10 @@ public class MisketController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!oyunBitti && atisHakki > 0)
+        if (!isDragging)
         {
             isDragging = true;
-            rb.isKinematic = true;
-            dragStartPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            dragStartPos.y = Mathf.Clamp(dragStartPos.y, -3.0f, 3.0f); // Misket y ekseninde sýnýrlý hareket etsin
-            springJoint.connectedAnchor = dragStartPos;
-            springJoint.enabled = true;
+            offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
         }
     }
 
@@ -42,57 +35,34 @@ public class MisketController : MonoBehaviour
             springJoint.enabled = false;
 
             Vector2 dragEndPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            dragEndPos.y = Mathf.Clamp(dragEndPos.y, -3.0f, 3.0f); // Misket y ekseninde sýnýrlý hareket etsin
+            dragEndPos.y = Mathf.Clamp(dragEndPos.y, -3.0f, 3.0f);
 
-            Vector2 force = dragStartPos - dragEndPos;
-            force = Vector2.ClampMagnitude(force, maxCekmeMesafesi) * 5.0f; // Misketi ne kadar geri çektiðimize baðlý olarak hýz ayarý yapabilirsiniz
+            Vector2 force = (Vector2)transform.position - dragEndPos;
+            force = Vector2.ClampMagnitude(force, maxCekmeMesafesi) * cekmeGucu;
             rb.AddForce(force, ForceMode2D.Impulse);
 
-            atisHakki--;
-
-            if (atisHakki == 0)
-            {
-                Debug.Log("Atýþ hakkýnýz bitti!");
-                oyunBitti = true;
-            }
+            AtisYapildi();
         }
     }
 
     private void Update()
     {
-        if (!oyunBitti && rb.velocity.magnitude < 0.1f)
+        if (isDragging)
         {
-            springJoint.enabled = false;
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+            transform.position = new Vector3(curPosition.x, curPosition.y, transform.position.z);
         }
 
-        if (transform.position.y < halkaDelik.position.y)
+        if (!isDragging && rb.velocity.magnitude < 0.1f)
         {
-            Debug.Log("Misketi halka deliðine soktunuz!");
-            oyunBitti = true;
-        }
-
-        if (transform.position.x > 10.0f) // Eðer misket çok hýzlý giderse sahneden çýkarsa
-        {
-            Debug.Log("Misketi kaybettiniz!");
-            can--;
-            if (can == 0)
-            {
-                Debug.Log("Canlarýnýz bitti, oyun bitti!");
-                oyunBitti = true;
-            }
-            else
-            {
-                Debug.Log("Kalan can: " + can);
-                ResetMisket();
-            }
+            rb.velocity = Vector2.zero;
         }
     }
 
-    public void ResetMisket()
+    private void AtisYapildi()
     {
-        transform.position = new Vector3(-6.0f, 0.0f, 0.0f);
-        rb.velocity = Vector2.zero;
-        rb.angularVelocity = 0.0f;
-        springJoint.enabled = false;
+        MisketOyunController oyunKontrol = FindObjectOfType<MisketOyunController>();
+        oyunKontrol.AtisYapildi();
     }
 }
