@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     public GameManager gameManager;
 
-    private bool isMoving = false;  // Bu deðiþken hareket durumunu kontrol etmek için kullanýlýr.
+   public bool isMoving = false;  // Bu deðiþken hareket durumunu kontrol etmek için kullanýlýr.
 
     private void Update()
     {
@@ -36,9 +36,5 @@ public class PlayerController : MonoBehaviour
             transform.Translate(movement);
         }
     }
-        public void Die()
-    {
-        // Handle player death, animations, etc.
-        gameManager.PlayerDied();
-    }
+    
 }
