@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081630323492768180}
   - component: {fileID: 5789954953237533044}
-  - component: {fileID: -8192167658535949794}
+  - component: {fileID: 8053002392119595996}
   m_Layer: 0
   m_Name: turuncumisket
   m_TagString: Misket
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8192167658535949794
+--- !u!114 &8053002392119595996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,5 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5aa464748285824b92fb27491d03977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  halkaDelik: {fileID: 6926677339444070319, guid: afd6a343ca866364bb8296daf50fb636, type: 3}
   maxCekmeMesafesi: 2
+  cekmeGucu: 5

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -8363932270093532869}
   - component: {fileID: 2837488724986724694}
   - component: {fileID: 4779261869036742161}
+  - component: {fileID: -3149660879620085026}
   m_Layer: 0
   m_Name: "PEMBEM\u0130SKET"
   m_TagString: Misket
@@ -171,5 +172,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5aa464748285824b92fb27491d03977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  halkaDelik: {fileID: 6926677339444070319, guid: afd6a343ca866364bb8296daf50fb636, type: 3}
   maxCekmeMesafesi: 2
+  cekmeGucu: 5
+--- !u!231 &-3149660879620085026
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4525617059131740970}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 1
+  m_DampingRatio: 0
+  m_Frequency: 1

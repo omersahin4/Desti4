@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1541722677398710552}
   - component: {fileID: 68520867858102211}
-  - component: {fileID: 8315308632950136805}
+  - component: {fileID: 3404886740018241634}
   m_Layer: 0
   m_Name: "sar\u0131misket"
   m_TagString: Misket
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8315308632950136805
+--- !u!114 &3404886740018241634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,5 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5aa464748285824b92fb27491d03977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  halkaDelik: {fileID: 6926677339444070319, guid: afd6a343ca866364bb8296daf50fb636, type: 3}
   maxCekmeMesafesi: 2
+  cekmeGucu: 5
