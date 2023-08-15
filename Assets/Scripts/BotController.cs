@@ -21,10 +21,4 @@ public class BotController : MonoBehaviour
         transform.Translate(movement);
     }
 
-    public void Die()
-    {
-        // Handle bot death, animations, etc.
-        gameManager.BotDied();
-        gameObject.SetActive(false);
-    }
 }

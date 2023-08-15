@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3eef1a94297cb439e0488f5aa2be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 1
   gameManager: {fileID: 743811021}
 --- !u!1 &141890871
 GameObject:
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3eef1a94297cb439e0488f5aa2be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 1
   gameManager: {fileID: 743811021}
 --- !u!1 &196424728
 GameObject:
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3eef1a94297cb439e0488f5aa2be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 1
   gameManager: {fileID: 743811021}
 --- !u!1 &437252487
 GameObject:
@@ -1091,17 +1091,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1823762684}
   bots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6469766}
+  - {fileID: 755489510}
+  - {fileID: 141890871}
+  - {fileID: 418290316}
   finishLine: {fileID: 196424730}
-  minGreenLightTime: 3
-  maxGreenLightTime: 5
-  redLightDuration: 5
-  gameOverText: {fileID: 0}
-  retryButton: {fileID: 0}
-  mainMenuButton: {fileID: 0}
+  playerController: {fileID: 0}
+  minGreenLightTime: 1
+  maxGreenLightTime: 2
+  redLightDuration: 2
   isGreenLightActive: 0
 --- !u!4 &743811022
 Transform:
@@ -1215,7 +1213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3eef1a94297cb439e0488f5aa2be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 1
   gameManager: {fileID: 743811021}
 --- !u!1 &878950713
 GameObject:
@@ -2138,8 +2136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f9808b5470f3064a9593fc6ae940161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 2
   gameManager: {fileID: 743811021}
+  isMoving: 0
 --- !u!1 &1867748024
 GameObject:
   m_ObjectHideFlags: 0
