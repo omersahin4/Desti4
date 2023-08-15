@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &242657286
 GameObject:
@@ -546,7 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &283630280
 GameObject:
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &289806782
 GameObject:
@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &424738972
 GameObject:
@@ -978,7 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &571936213
 GameObject:
@@ -1036,7 +1036,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons:
+  - {fileID: 242657289}
+  - {fileID: 1062838471}
+  - {fileID: 289806785}
+  - {fileID: 617761924}
+  - {fileID: 798212523}
+  - {fileID: 283630283}
+  - {fileID: 736348232}
+  - {fileID: 2141096604}
+  - {fileID: 1851400753}
+  - {fileID: 1949950172}
+  - {fileID: 231423054}
+  - {fileID: 0}
   maxLives: 3
 --- !u!1 &617761921
 GameObject:
@@ -1180,7 +1192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &736348229
 GameObject:
@@ -1324,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &798212520
 GameObject:
@@ -1468,7 +1480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &955669261
 GameObject:
@@ -1683,7 +1695,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: b
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1062838472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,7 +1720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &1851400750
 GameObject:
@@ -1840,7 +1864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &1949950169
 GameObject:
@@ -1984,7 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
 --- !u!1 &2141096601
 GameObject:
@@ -2128,5 +2152,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camSegments: []
+  camButtons: []
   maxLives: 3
