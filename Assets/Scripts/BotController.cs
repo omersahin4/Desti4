@@ -20,5 +20,11 @@ public class BotController : MonoBehaviour
         Vector3 movement = Vector3.left * moveSpeed * Time.deltaTime;
         transform.Translate(movement);
     }
+    public void Die()
+    {
+        // Bot ölümü ile ilgili iþlemleri burada yapabilirsiniz
+        gameManager.BotDied();
+        gameObject.SetActive(false);
+    }
 
 }

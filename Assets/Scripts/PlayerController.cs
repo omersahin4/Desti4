@@ -36,5 +36,11 @@ public class PlayerController : MonoBehaviour
             transform.Translate(movement);
         }
     }
-    
+    public void Die()
+    {
+        // Oyuncunun ölüm iþlemleri burada gerçekleþtirilir.
+        // Örneðin, animasyonlar, ses efektleri, oyun sonu iþlemleri vb.
+        gameManager.PlayerDied();
+        gameObject.SetActive(false);
+    }
 }

@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         remainingBots = bots.Length;
-        
+
         StartCoroutine(GameLoop());
     }
 
@@ -50,9 +50,29 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(redLightDuration);
         if (isPlayerAlive && playerController != null && playerController.isMoving)
         {
-            isPlayerAlive = false;
-            player.SetActive(false);
+            PlayerDied();
         }
-    }    
+    }
+    public void BotDied()
+    {
+        remainingBots--;
+        if (remainingBots <= 0)
+        {
+            EndGame(true);
+        }
 
+    }
+    private void EndGame(bool isWinner)
+    {
+        // Oyunu sonlandýrma iþlemleri burada gerçekleþtirilebilir.
+        Debug.Log(isWinner ? "You Win!" : "Game Over");
+    }
+    public void PlayerDied()
+    {
+        isPlayerAlive = false;
+        player.SetActive(false);
+        Debug.Log("Oyuncu Öldü");
+        // Burada yapýlmasý gereken ölüm ile ilgili iþlemleri gerçekleþtirebilirsiniz.
+        // Örneðin, oyun sonu ekranýný göstermek veya tekrar baþlatma seçenekleri gibi.
+    }
 }
