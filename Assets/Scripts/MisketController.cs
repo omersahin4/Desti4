@@ -88,7 +88,7 @@ public class MisketController : MonoBehaviour
         }
     }
 
-    private void ResetMisket()
+    public void ResetMisket()
     {
         transform.position = new Vector3(-6.0f, 0.0f, 0.0f);
         rb.velocity = Vector2.zero;
