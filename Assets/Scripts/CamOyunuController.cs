@@ -2,34 +2,63 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class CamOyunuController : MonoBehaviour
 {
-    public GameObject[] camSegments; // Referans to each cam segment
+    public Button[] camButtons; // Array of camera buttons
     public int maxLives = 3;
 
     private int currentLives;
+    private int correctCamIndex;
 
     private void Start()
     {
         currentLives = maxLives;
+        GenerateRandomCam(); // Generate a random cam at the start
 
-        // Assign button click events to cam segments
-        for (int i = 0; i < camSegments.Length; i++)
+        // Assign click events to camera buttons
+        for (int i = 0; i < camButtons.Length; i++)
         {
             int camIndex = i; // Store current index for the lambda
-            Button button = camSegments[i].GetComponent<Button>();
+            Button button = camButtons[i];
             button.onClick.AddListener(() => OnCamButtonClicked(camIndex));
+        }
+    }
+
+    private void GenerateRandomCam()
+    {
+        correctCamIndex = Random.Range(0, camButtons.Length); // Select a random cam index
+        SetCamStatus(correctCamIndex);
+    }
+
+    private void SetCamStatus(int camIndex)
+    {
+        Button camButton = camButtons[camIndex];
+        bool isCamBroken = Random.Range(0f, 1f) < 0.5f; // Assuming a 50% chance of being broken
+
+        // Set the button's color or image based on the cam's status
+        Image camImage = camButton.GetComponent<Image>();
+        if (camImage != null)
+        {
+            if (isCamBroken)
+            {
+                // Set sprite for broken cam
+                camImage.color = Color.red; // You can adjust this to match your game's visuals
+            }
+            else
+            {
+                // Set sprite for intact cam
+                camImage.color = Color.green; // You can adjust this to match your game's visuals
+            }
         }
     }
 
     private void OnCamButtonClicked(int camIndex)
     {
-        // Check if the selected cam is correct or not
-        bool isCorrect = CheckCam(camIndex);
-
-        if (isCorrect)
+        if (CheckCam(camIndex))
         {
-            // Continue to the next level
+            // Correct cam selected, continue to the next level or take any necessary action
+            GenerateRandomCam(); // Generate a new random cam for the next round
         }
         else
         {
@@ -39,9 +68,7 @@ public class CamOyunuController : MonoBehaviour
 
     private bool CheckCam(int camIndex)
     {
-        // Implement your logic to check if the selected cam is correct
-        // Return true if correct, false otherwise
-        return false;
+        return camIndex == correctCamIndex; // Return true if the selected cam is correct, false otherwise
     }
 
     private void LoseLife()
@@ -50,11 +77,13 @@ public class CamOyunuController : MonoBehaviour
         if (currentLives <= 0)
         {
             // Game Over logic
+            Debug.Log("Game Over");
         }
         else
         {
             // Reset position and continue
-            // Reset cam selection for the new attempt
-        }
+            Debug.Log("Life Lost. Remaining Lives: " + currentLives);
+            GenerateRandomCam(); // Generate a new random cam for the next attempt
+        }
     }
 }
