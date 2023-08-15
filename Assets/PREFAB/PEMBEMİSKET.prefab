@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -171,6 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5aa464748285824b92fb27491d03977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPullDistance: 3
-  minSpeed: 5
-  maxSpeed: 20
+  halkaDelik: {fileID: 6926677339444070319, guid: afd6a343ca866364bb8296daf50fb636, type: 3}
+  maxCekmeMesafesi: 2
