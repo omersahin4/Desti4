@@ -53,7 +53,7 @@ public class CamOyunuController : MonoBehaviour
         }
     }
 
-    private void OnCamButtonClicked(int camIndex)
+    public void OnCamButtonClicked(int camIndex)
     {
         if (CheckCam(camIndex))
         {
@@ -63,6 +63,7 @@ public class CamOyunuController : MonoBehaviour
         else
         {
             LoseLife();
+           
         }
     }
 
@@ -74,6 +75,7 @@ public class CamOyunuController : MonoBehaviour
     private void LoseLife()
     {
         currentLives--;
+        Debug.Log("can kaybettin");
         if (currentLives <= 0)
         {
             // Game Over logic

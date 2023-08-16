@@ -271,7 +271,6 @@ GameObject:
   - component: {fileID: 231423052}
   - component: {fileID: 231423053}
   - component: {fileID: 231423054}
-  - component: {fileID: 231423055}
   m_Layer: 0
   m_Name: GlassGame_glass (10)
   m_TagString: Untagged
@@ -389,21 +388,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &231423055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231423051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &242657286
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +412,6 @@ GameObject:
   - component: {fileID: 242657287}
   - component: {fileID: 242657288}
   - component: {fileID: 242657289}
-  - component: {fileID: 242657290}
   m_Layer: 0
   m_Name: GlassGame_glass
   m_TagString: Untagged
@@ -533,21 +529,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &242657290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242657286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &283630280
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +553,6 @@ GameObject:
   - component: {fileID: 283630281}
   - component: {fileID: 283630282}
   - component: {fileID: 283630283}
-  - component: {fileID: 283630284}
   m_Layer: 0
   m_Name: GlassGame_glass (5)
   m_TagString: Untagged
@@ -677,21 +670,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &283630284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283630280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &289806782
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +694,6 @@ GameObject:
   - component: {fileID: 289806783}
   - component: {fileID: 289806784}
   - component: {fileID: 289806785}
-  - component: {fileID: 289806786}
   m_Layer: 0
   m_Name: GlassGame_glass (2)
   m_TagString: Untagged
@@ -821,21 +811,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &289806786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289806782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &424738972
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +835,6 @@ GameObject:
   - component: {fileID: 424738973}
   - component: {fileID: 424738974}
   - component: {fileID: 424738975}
-  - component: {fileID: 424738976}
   m_Layer: 0
   m_Name: GlassGame_glass (11)
   m_TagString: Untagged
@@ -965,21 +952,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &424738976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424738972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &571936213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1033,7 @@ MonoBehaviour:
   - {fileID: 1851400753}
   - {fileID: 1949950172}
   - {fileID: 231423054}
-  - {fileID: 0}
+  - {fileID: 424738975}
   maxLives: 3
 --- !u!1 &617761921
 GameObject:
@@ -1061,7 +1046,6 @@ GameObject:
   - component: {fileID: 617761922}
   - component: {fileID: 617761923}
   - component: {fileID: 617761924}
-  - component: {fileID: 617761925}
   m_Layer: 0
   m_Name: GlassGame_glass (3)
   m_TagString: Untagged
@@ -1179,21 +1163,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &617761925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617761921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &736348229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,7 +1187,6 @@ GameObject:
   - component: {fileID: 736348230}
   - component: {fileID: 736348231}
   - component: {fileID: 736348232}
-  - component: {fileID: 736348233}
   m_Layer: 0
   m_Name: GlassGame_glass (6)
   m_TagString: Untagged
@@ -1323,21 +1304,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &736348233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736348229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &798212520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,7 +1328,6 @@ GameObject:
   - component: {fileID: 798212521}
   - component: {fileID: 798212522}
   - component: {fileID: 798212523}
-  - component: {fileID: 798212524}
   m_Layer: 0
   m_Name: GlassGame_glass (4)
   m_TagString: Untagged
@@ -1467,21 +1445,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &798212524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798212520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &955669261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,6 +1542,108 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1010164625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010164629}
+  - component: {fileID: 1010164628}
+  - component: {fileID: 1010164627}
+  - component: {fileID: 1010164626}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1010164626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010164625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1010164627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010164625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1010164628
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010164625}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1010164629
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010164625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1062838468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,7 +1655,6 @@ GameObject:
   - component: {fileID: 1062838469}
   - component: {fileID: 1062838470}
   - component: {fileID: 1062838471}
-  - component: {fileID: 1062838472}
   m_Layer: 0
   m_Name: GlassGame_glass (1)
   m_TagString: Untagged
@@ -1697,6 +1774,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 571936215}
         m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
         m_MethodName: 
         m_Mode: 1
@@ -1708,20 +1797,74 @@ MonoBehaviour:
           m_StringArgument: b
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1062838472
+--- !u!1 &1117046748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1117046751}
+  - component: {fileID: 1117046750}
+  - component: {fileID: 1117046749}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1117046749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062838468}
+  m_GameObject: {fileID: 1117046748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1117046750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117046748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1117046751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117046748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1851400750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,7 +1876,6 @@ GameObject:
   - component: {fileID: 1851400751}
   - component: {fileID: 1851400752}
   - component: {fileID: 1851400753}
-  - component: {fileID: 1851400754}
   m_Layer: 0
   m_Name: GlassGame_glass (8)
   m_TagString: Untagged
@@ -1851,21 +1993,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1851400754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851400750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1949950169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,7 +2017,6 @@ GameObject:
   - component: {fileID: 1949950170}
   - component: {fileID: 1949950171}
   - component: {fileID: 1949950172}
-  - component: {fileID: 1949950173}
   m_Layer: 0
   m_Name: GlassGame_glass (9)
   m_TagString: Untagged
@@ -1995,21 +2134,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1949950173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949950169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2141096601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,7 +2158,6 @@ GameObject:
   - component: {fileID: 2141096602}
   - component: {fileID: 2141096603}
   - component: {fileID: 2141096604}
-  - component: {fileID: 2141096605}
   m_Layer: 0
   m_Name: GlassGame_glass (7)
   m_TagString: Untagged
@@ -2139,18 +2275,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &2141096605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141096601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7a25c00820d804d9aad7e1426ad3f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camButtons: []
-  maxLives: 3
+      m_Calls:
+      - m_Target: {fileID: 571936215}
+        m_TargetAssemblyTypeName: CamOyunuController, Assembly-CSharp
+        m_MethodName: OnCamButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
