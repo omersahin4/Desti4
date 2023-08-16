@@ -220,6 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3eef1a94297cb439e0488f5aa2be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chance: 3
+  isMoving: 0
+  currenChanceValue: 0
   moveSpeed: 1
   gameManager: {fileID: 743811021}
 --- !u!1 &141890871
@@ -319,6 +322,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3eef1a94297cb439e0488f5aa2be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chance: 5
+  isMoving: 0
+  currenChanceValue: 0
   moveSpeed: 1
   gameManager: {fileID: 743811021}
 --- !u!1 &196424728
@@ -616,6 +622,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3eef1a94297cb439e0488f5aa2be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chance: 2
+  isMoving: 0
+  currenChanceValue: 0
   moveSpeed: 1
   gameManager: {fileID: 743811021}
 --- !u!1 &437252487
@@ -1208,6 +1217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3eef1a94297cb439e0488f5aa2be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chance: 4
+  isMoving: 0
+  currenChanceValue: 0
   moveSpeed: 1
   gameManager: {fileID: 743811021}
 --- !u!1 &1066136782
