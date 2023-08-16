@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
             }
 
             // Misketi tekrar baþlangýç pozisyonuna yerleþtir
-            collision.gameObject.GetComponent<MisketController>().ResetMisket();
+            //collision.gameObject.GetComponent<MisketController>().ResetMisket();
         }
     }
 }
