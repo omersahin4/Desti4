@@ -33,12 +33,14 @@ public class Cutter : MonoBehaviour
 
     void StartCutting()
     {
+        Debug.Log("kesiliyor");
         isCutting = true;
         previousPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void StopCutting()
     {
+        Debug.Log("kesme durdu");
         isCutting = false;
     }
 
