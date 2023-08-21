@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Misket
   - Marble
+  - Bot
+  - Oyuncu
   layers:
   - Default
   - TransparentFX

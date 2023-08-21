@@ -2,19 +2,15 @@ using UnityEngine;
 
 public class TopScript : MonoBehaviour
 {
-    private NesneScript nesneScript;
-
-    private void Start()
-    {
-        nesneScript = FindObjectOfType<NesneScript>();
-    }
+    private bool alindi = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !alindi)
         {
-            nesneScript.Alindi();
-            Destroy(gameObject);
+            alindi = true;
+            Debug.Log("Top alýndý!");
+            gameObject.SetActive(false); // Topu görünmez yap
         }
     }
 }
