@@ -3,7 +3,7 @@ using UnityEngine;
 public class MisketKontrol : MonoBehaviour
 {
     private Rigidbody2D rb2D;
-    private bool isDragging = false;
+   // private bool isDragging = false;
     private Vector3 offset;
     private float throwForce = 10.0f;
 
@@ -14,14 +14,14 @@ public class MisketKontrol : MonoBehaviour
 
     private void OnMouseDown()
     {
-        isDragging = true;
+      //  isDragging = true;
         offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f));
         rb2D.velocity = Vector2.zero;
     }
 
     private void OnMouseUp()
     {
-        isDragging = false;
+       // isDragging = false;
 
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10.0f);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
