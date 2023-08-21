@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 111620427}
   - component: {fileID: 111620426}
   - component: {fileID: 111620429}
-  - component: {fileID: 111620428}
   m_Layer: 0
   m_Name: kalamar-removebg-preview
   m_TagString: Untagged
@@ -209,41 +208,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &111620428
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111620425}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.11064786, y: -2.2159085}
-  serializedVersion: 2
-  m_Radius: 0.4740071
 --- !u!68 &111620429
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -942,7 +906,7 @@ Transform:
   m_GameObject: {fileID: 1779778644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: -1.91, z: 0}
-  m_LocalScale: {x: 3.19, y: 3.19, z: 3.19}
+  m_LocalScale: {x: 5.31, y: 5.31, z: 5.31}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1061,7 +1025,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &2087733339
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1123,7 +1087,7 @@ Transform:
   m_GameObject: {fileID: 2087733336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.02, y: 2.79, z: 0}
-  m_LocalScale: {x: 3.072426, y: 3.280012, z: 3.83}
+  m_LocalScale: {x: 4.9739404, y: 5.31, z: 6.2003736}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
