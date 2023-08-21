@@ -836,7 +836,6 @@ GameObject:
   - component: {fileID: 1779778646}
   - component: {fileID: 1779778645}
   - component: {fileID: 1779778649}
-  - component: {fileID: 1779778648}
   - component: {fileID: 1779778647}
   m_Layer: 0
   m_Name: bot
@@ -926,18 +925,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oyuncu: {fileID: 2087733336}
   moveSpeed: 1.2
---- !u!114 &1779778648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779778644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52ca65b7d82c09a4392a4e5dc85db7be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1779778649
 Rigidbody2D:
   serializedVersion: 4
