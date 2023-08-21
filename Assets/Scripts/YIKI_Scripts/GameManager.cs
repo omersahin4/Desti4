@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+   
     public GameObject player; // Ana karakteriniz
     public GameObject[] bots; // Bot karakterleri
     public Transform finishLine; // Bitiþ çizgisi
     public PlayerController playerController;
     public BotController botController;
+    public GameObject gameover;
+    public GameObject deadbody;
 
     public float minGreenLightTime = 3f;
     public float maxGreenLightTime = 5f;
@@ -70,12 +73,24 @@ public class GameManager : MonoBehaviour
     {
         // Oyunu sonlandýrma iþlemleri burada gerçekleþtirilebilir.
         Debug.Log(isWinner ? "You Win!" : "Game Over");
+        Time.timeScale = 0;
+    }
+    public void GameOver()
+    {
+        player.SetActive(false);
+        deadbody.SetActive(true);
+        gameover.SetActive(true);
+
+        //Time.timeScale = 0;
     }
     public void PlayerDied()
     {
-        isPlayerAlive = false;
-        player.SetActive(false);
         Debug.Log("Oyuncu Öldü");
+        GameOver();
+        //isPlayerAlive = false;
+
+
+        // player.SetActive(false);
         // Burada yapýlmasý gereken ölüm ile ilgili iþlemleri gerçekleþtirebilirsiniz.
         // Örneðin, oyun sonu ekranýný göstermek veya tekrar baþlatma seçenekleri gibi.
     }
