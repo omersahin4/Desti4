@@ -36,6 +36,11 @@ public class BotController : MonoBehaviour
                 isMoving = false;
             }
         }
+        if(gameManager.redLightActive==true && isMoving == true)
+        {
+            Debug.Log("bot öldü");
+            Die();
+        }
 
     }
 
@@ -44,10 +49,7 @@ public class BotController : MonoBehaviour
         isMoving = true;
         Vector3 movement = Vector3.left * moveSpeed * Time.deltaTime;
         transform.Translate(movement);
-        if (gameManager.redLightActive == true)
-        {
-            Die();
-        }
+        
     }
     public void Die()
     {

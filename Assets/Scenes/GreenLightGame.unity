@@ -1874,10 +1874,13 @@ MonoBehaviour:
   redLightAnimator: {fileID: 437252488}
   player: {fileID: 746510208}
   bots:
-  - {fileID: 6469766}
-  - {fileID: 755489510}
-  - {fileID: 141890871}
-  - {fileID: 418290316}
+  - {fileID: 120329433}
+  - {fileID: 626511678}
+  - {fileID: 293804217}
+  - {fileID: 267517493}
+  - {fileID: 1663431273}
+  - {fileID: 1166931255}
+  - {fileID: 62973851}
   finishLine: {fileID: 196424730}
   playerController: {fileID: 746510212}
   botController: {fileID: 120329435}

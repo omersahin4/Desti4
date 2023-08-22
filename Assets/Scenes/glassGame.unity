@@ -705,7 +705,6 @@ GameObject:
   m_Component:
   - component: {fileID: 571936214}
   - component: {fileID: 571936215}
-  - component: {fileID: 571936216}
   m_Layer: 0
   m_Name: Play Area
   m_TagString: Untagged
@@ -758,27 +757,6 @@ MonoBehaviour:
   maxLives: 3
   currentLives: 0
   currentGameIndex: 0
---- !u!114 &571936216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571936213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b10a51a32bcd9a489225b18f6709692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camSegments:
-  - {fileID: 242657286}
-  - {fileID: 736348229}
-  - {fileID: 1843020936}
-  - {fileID: 1280069421}
-  maxLives: 3
-  currentLives: 0
-  currentButtonIndex: 0
-  isGameOver: 0
 --- !u!1 &589694972
 GameObject:
   m_ObjectHideFlags: 0
