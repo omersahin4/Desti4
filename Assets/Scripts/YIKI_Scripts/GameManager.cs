@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public float maxGreenLightTime = 5f;
     public float redLightDuration = 5f;
 
-
+    public bool redLightActive = false;
     public bool isGreenLightActive = false;
     private bool isPlayerAlive = true;
     private int remainingBots;
@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator RedLightPhase()
     {
+        redLightActive = true;
         Debug.Log("kýrmýzý ýþýk");
         redLightAnimator.SetBool("isTrue", true);
         yield return new WaitForSeconds(redLightDuration);

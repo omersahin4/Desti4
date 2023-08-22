@@ -5,7 +5,7 @@ using UnityEngine;
 public class BotController : MonoBehaviour
 {
 
-    [Range(1, 5), SerializeField] private int chance;
+    [Range(1, 8), SerializeField] private int chance;
     private bool once = false;
     public bool isMoving = false;
     [SerializeField] private int currenChanceValue;
@@ -23,12 +23,13 @@ public class BotController : MonoBehaviour
         {
             if(once == false)
             {
-                currenChanceValue = Random.Range(1, 6);
+                currenChanceValue = Random.Range(1, 9);
                 once = true;
             }
             if (chance > currenChanceValue)
             {
                 MoveLeft();
+                
             }
             else
             {
@@ -43,6 +44,10 @@ public class BotController : MonoBehaviour
         isMoving = true;
         Vector3 movement = Vector3.left * moveSpeed * Time.deltaTime;
         transform.Translate(movement);
+        if (gameManager.redLightActive == true)
+        {
+            Die();
+        }
     }
     public void Die()
     {

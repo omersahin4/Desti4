@@ -10,11 +10,11 @@ public class HalatKontrol : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.M))
+        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space))
         {
             sagaCekiliyor = true;
         }
-        else if (Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.M))
+        else if (Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space))
         {
             sagaCekiliyor = false;
             halatRigidbody.velocity = new Vector2(0, halatRigidbody.velocity.y); // Týklama býrakýldýðýnda hýzý sýfýrla
