@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-   
+    public Animator greenLightAnimator;
+    public Animator redLightAnimator;
     public GameObject player; // Ana karakteriniz
     public GameObject[] bots; // Bot karakterleri
     public Transform finishLine; // Bitiþ çizgisi
@@ -42,15 +43,19 @@ public class GameManager : MonoBehaviour
     private IEnumerator GreenLightPhase()
     {
         isGreenLightActive = true;
+        greenLightAnimator.SetBool("isTrue", true);
+        redLightAnimator.SetBool("isTrue", false);
         Debug.Log("yeþil ýþýk");
         float greenLightTime = Random.Range(minGreenLightTime, maxGreenLightTime);
         yield return new WaitForSeconds(greenLightTime);
+        greenLightAnimator.SetBool("isTrue", false);
         isGreenLightActive = false;
     }
 
     private IEnumerator RedLightPhase()
     {
         Debug.Log("kýrmýzý ýþýk");
+        redLightAnimator.SetBool("isTrue", true);
         yield return new WaitForSeconds(redLightDuration);
 
         if (isPlayerAlive && playerController != null && playerController.isMoving)

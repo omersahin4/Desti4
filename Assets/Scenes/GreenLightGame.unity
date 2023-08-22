@@ -1870,6 +1870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa7201c818c2894e9ed50a52418b98f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  greenLightAnimator: {fileID: 1653273325}
+  redLightAnimator: {fileID: 437252488}
   player: {fileID: 746510208}
   bots:
   - {fileID: 6469766}
