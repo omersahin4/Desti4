@@ -6,7 +6,7 @@ public class GlassGroup : MonoBehaviour
 {
     public bool success = false;
     public List<Glass> glassGroup;
-
+    public int index = -1;
     /* [System.Serializable]
      public struct Group
      {
@@ -22,12 +22,12 @@ public class GlassGroup : MonoBehaviour
             glassGroup.Add(item);
         }
     }
-    public void Set()
+    public void Set(int _index)
     {
         bool isBreakable = Random.Range(0f, 1f) < 0.5f;
         glassGroup[0].isCorrect = isBreakable;
         glassGroup[1].isCorrect = !isBreakable;
-
+        index= _index;
         /* foreach (var glass in glassGroup)
          {
        //      glass.glassGroup = this;
