@@ -8,6 +8,7 @@ TagManager:
   - Marble
   - Bot
   - Oyuncu
+  - Pin
   layers:
   - Default
   - TransparentFX
