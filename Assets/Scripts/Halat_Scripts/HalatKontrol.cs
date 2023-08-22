@@ -6,39 +6,29 @@ public class HalatKontrol : MonoBehaviour
     public float hiz = 5.0f;
     public float botHiz = 2.0f; // Botun hareket hýzý
 
-    private bool sagaCekiliyor = false; // M tuþuna basýldýðýnda çekme baþlar
+    private bool týklamaYapýldý = false; // Týklama yapýldýðýnda çekme baþlar
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
-            sagaCekiliyor = true;
+            týklamaYapýldý = true; // Týklama yapýldýðýnda çekme baþlar
         }
-        else if (Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space))
+        else if (Input.GetMouseButtonUp(0))
         {
-            sagaCekiliyor = false;
-            halatRigidbody.velocity = new Vector2(0, halatRigidbody.velocity.y); // Týklama býrakýldýðýnda hýzý sýfýrla
+            týklamaYapýldý = false; // Týklama býrakýldýðýnda çekmeyi durdur
+            halatRigidbody.velocity = Vector2.zero; // Týklama býrakýldýðýnda hýzý sýfýrla
         }
 
         float hareket = 0.0f;
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (týklamaYapýldý)
         {
-            hareket = -hiz; // Sol ok tuþuna basýldýðýnda sola hareket
-        }
-        else if (sagaCekiliyor)
-        {
-            hareket = hiz; // Týklama veya "M" tuþuna basýlýysa saða hareket
+            hareket = hiz; // Týklama olduðunda saða hareket
         }
 
         // Klavyeden gelen input veya botun otomatik hareketine göre hareket
-        Vector2 toplamHareket = new Vector2(hareket, 0) + new Vector2(-botHiz, 0);
+        Vector2 toplamHareket = new Vector2(hareket - botHiz, halatRigidbody.velocity.y);
         halatRigidbody.velocity = toplamHareket;
-    }
-
-    private void OnDisable()
-    {
-        // Halatýn hareketini sýfýrla
-        halatRigidbody.velocity = Vector2.zero;
     }
 }
