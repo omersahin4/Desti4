@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 using static UnityEditor.Progress;
 
 public class CamOyunuController : MonoBehaviour
@@ -14,6 +15,8 @@ public class CamOyunuController : MonoBehaviour
     public int currentLives;
     private int correctCamIndex;
     public int currentGameIndex = 0;
+    public GameObject gameovercanvas;
+    public GameObject retrynutton;
     private void Start()
     {
         if (instance == null)
@@ -62,6 +65,8 @@ public class CamOyunuController : MonoBehaviour
         {
             // Game Over logic
             Debug.Log("Game Over");
+            retrynutton.SetActive(true);
+            gameovercanvas.SetActive(true);
         }
         else
         {
