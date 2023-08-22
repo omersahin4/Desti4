@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public BotController botController;
     public GameObject gameover;
-    public GameObject deadbody;
+    //public GameObject deadbody;
 
     public float minGreenLightTime = 3f;
     public float maxGreenLightTime = 5f;
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         player.SetActive(false);
-        deadbody.SetActive(true);
+        //deadbody.SetActive(true);
         gameover.SetActive(true);
 
         //Time.timeScale = 0;
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
         //isPlayerAlive = false;
 
 
-        // player.SetActive(false);
+         player.SetActive(false);
         // Burada yapýlmasý gereken ölüm ile ilgili iþlemleri gerçekleþtirebilirsiniz.
         // Örneðin, oyun sonu ekranýný göstermek veya tekrar baþlatma seçenekleri gibi.
     }
