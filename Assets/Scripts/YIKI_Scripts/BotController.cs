@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class BotController : MonoBehaviour
@@ -13,7 +14,7 @@ public class BotController : MonoBehaviour
     public float moveSpeed = 3f;
     public GameManager gameManager;
     public Animator animator;
-
+   
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -66,7 +67,8 @@ public class BotController : MonoBehaviour
     {
         // Bot ölümü ile ilgili iþlemleri burada yapabilirsiniz
         gameManager.BotDied();
-       // gameObject.SetActive(false);
+        Debug.log("hamood");
+        // gameObject.SetActive(false);
     }
 
 }
