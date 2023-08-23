@@ -6,15 +6,16 @@ public class Glass : MonoBehaviour
 {
     public bool isCorrect = false;
     private GlassGroup glassGroup;
-
+    bool isInteractable = true;
     private void Awake()
     {
         glassGroup = GetComponentInParent<GlassGroup>();
     }
     public void OnMouseDown()
     {
-        if (glassGroup.index == CamOyunuController.instance.currentGameIndex)
+        if (glassGroup.index == CamOyunuController.instance.currentGameIndex && isInteractable)
         {
+            isInteractable = false;
             if (isCorrect == false)
             {
                 GetComponent<SpriteRenderer>().color = Color.red;

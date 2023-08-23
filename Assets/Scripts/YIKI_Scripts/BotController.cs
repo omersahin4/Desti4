@@ -49,7 +49,7 @@ public class BotController : MonoBehaviour
         }
         if(gameManager.redLightActive==true && isMoving == true)
         {
-            Debug.Log("bot öldü");
+            
             Die();
         }
 
@@ -67,7 +67,7 @@ public class BotController : MonoBehaviour
     {
         // Bot ölümü ile ilgili iþlemleri burada yapabilirsiniz
         gameManager.BotDied();
-        Debug.log("hamood");
+        
         // gameObject.SetActive(false);
     }
 
