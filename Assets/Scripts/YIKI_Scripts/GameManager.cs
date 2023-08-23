@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     {
         redLightActive = true;
         Debug.Log("kýrmýzý ýþýk");
+        Debug.Log("hamood");
         redLightAnimator.SetBool("isTrue", true);
         yield return new WaitForSeconds(redLightDuration);
 
