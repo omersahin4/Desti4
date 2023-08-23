@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 260924868}
   - component: {fileID: 260924863}
   - component: {fileID: 260924867}
+  - component: {fileID: 260924869}
   m_Layer: 0
   m_Name: squid_game_BB_14
   m_TagString: Player
@@ -278,6 +279,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54acdcabf7d7d3b4aa143dee5db47dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &260924869
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260924862}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &330750205
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +546,7 @@ GameObject:
   - component: {fileID: 495151127}
   - component: {fileID: 495151123}
   - component: {fileID: 495151126}
+  - component: {fileID: 495151128}
   m_Layer: 0
   m_Name: squid_game_BB_16
   m_TagString: Player
@@ -660,6 +689,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54acdcabf7d7d3b4aa143dee5db47dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &495151128
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495151121}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &629545043
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +861,7 @@ GameObject:
   - component: {fileID: 845265659}
   - component: {fileID: 845265655}
   - component: {fileID: 845265658}
+  - component: {fileID: 845265660}
   m_Layer: 0
   m_Name: squid_game_BB_52
   m_TagString: Player
@@ -947,6 +1004,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54acdcabf7d7d3b4aa143dee5db47dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &845265660
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845265653}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1004452120
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,6 +1044,7 @@ GameObject:
   - component: {fileID: 1004452126}
   - component: {fileID: 1004452121}
   - component: {fileID: 1004452125}
+  - component: {fileID: 1004452127}
   m_Layer: 0
   m_Name: squid_game_BB_56
   m_TagString: Player
@@ -1102,6 +1187,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54acdcabf7d7d3b4aa143dee5db47dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1004452127
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004452120}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1651853627
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,9 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GreenLightGame.unity
     guid: b80d9154c3bd87f4eaf4d6801a7da628
-  - enabled: 0
-    path: Assets/Scenes/MarbleBall.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/DalgonaGame.unity
+    guid: 4a8f47ce5b53e1b40a4be303387a29bc
+  - enabled: 1
+    path: "Assets/Scenes/Halat\xC7ekme.unity"
+    guid: d08e695f3fe8f3b4db07472ff88586b3
+  - enabled: 1
+    path: Assets/Scenes/glassGame.unity
+    guid: cdc1689cf09932142ac578bb7dc82507
+  - enabled: 1
+    path: Assets/Scenes/MisketOyunu.unity
+    guid: 4c8f7895409a80f459c6e81a68e73ddc
   - enabled: 1
     path: Assets/Scenes/Kalamar oyunu.unity
     guid: 67c85716de615244c886bf8acd670a42

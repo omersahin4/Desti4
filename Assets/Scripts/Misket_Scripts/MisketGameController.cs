@@ -9,9 +9,13 @@ public class MisketGameController : MonoBehaviour
     public Text scoreText;
     public Text messageText;
     public float maxBallSpeed = 10f;
-    public int targetScore = 4;
-    public float gameDuration = 40f;
+    public int targetScore = 6;
+    public float gameDuration = 10f;
     public MisketBall misketBall;
+    public GameObject retrybutton;
+    public GameObject gameovercanvas;
+    public GameObject wingamecanvas;
+    public GameObject levelupbutton;
 
     private int score = 0;
     private bool gameOver = false;
@@ -68,6 +72,9 @@ public class MisketGameController : MonoBehaviour
         gameOver = true;
         messageText.gameObject.SetActive(true);
         messageText.text = "You Win!";
+        Debug.Log("wingame");
+        gameovercanvas.SetActive(true);
+        retrybutton.gameObject.SetActive(true); 
     }
 
     private void LoseGame()
@@ -75,6 +82,9 @@ public class MisketGameController : MonoBehaviour
         gameOver = true;
         messageText.gameObject.SetActive(true);
         messageText.text = "Game Over";
+        Debug.Log("losegame");
+        wingamecanvas.SetActive(true);
+        levelupbutton.SetActive(true);
     }
 
     private IEnumerator GameTimer()
@@ -82,6 +92,8 @@ public class MisketGameController : MonoBehaviour
         yield return new WaitForSeconds(gameDuration);
         if (!gameOver)
         {
+            Debug.Log("Süre bitti");
+          
             LoseGame();
         }
     }

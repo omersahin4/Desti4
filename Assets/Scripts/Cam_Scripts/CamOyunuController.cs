@@ -17,6 +17,8 @@ public class CamOyunuController : MonoBehaviour
     public int currentGameIndex = 0;
     public GameObject gameovercanvas;
     public GameObject retrynutton;
+    public GameObject wingame;
+    public GameObject levelupbutton;
     private void Start()
     {
         if (instance == null)
@@ -35,10 +37,6 @@ public class CamOyunuController : MonoBehaviour
         }
 
     }
-
-
-
-
     public void OnCamButtonClicked(int camIndex)
     {
         if (CheckCam(camIndex))
@@ -55,6 +53,12 @@ public class CamOyunuController : MonoBehaviour
     private bool CheckCam(int camIndex)
     {
         return camIndex == correctCamIndex; // Return true if the selected cam is correct, false otherwise
+    }
+    public void LevelCompleted()
+    {
+        Debug.Log("Bölüm Bitmiþtir");
+        wingame.SetActive(true);
+        levelupbutton.SetActive(true);
     }
 
     public void LoseLife()

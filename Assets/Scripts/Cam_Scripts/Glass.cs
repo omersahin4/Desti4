@@ -25,6 +25,10 @@ public class Glass : MonoBehaviour
             {
                 GetComponent<SpriteRenderer>().color = Color.green;
                 CamOyunuController.instance.currentGameIndex++;
+                if (CamOyunuController.instance.currentGameIndex >= CamOyunuController.instance.camButtons.Length)
+                {
+                    CamOyunuController.instance.LevelCompleted(); // Bölüm bitmiþse fonksiyonu çaðýr
+                }
 
             }
         }
