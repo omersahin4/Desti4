@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float Speed = 0f;
     public bool isMoving = false;  // Bu deðiþken hareket durumunu kontrol etmek için kullanýlýr.
     private Animator animator;
+    public GameObject retryb;
 
     private void Start()
     {
@@ -51,5 +52,6 @@ public class PlayerController : MonoBehaviour
         // Örneðin, animasyonlar, ses efektleri, oyun sonu iþlemleri vb.
         gameManager.PlayerDied();
         gameObject.SetActive(false);
+        retryb.SetActive(true);
     }
 }

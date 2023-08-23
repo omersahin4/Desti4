@@ -24,6 +24,8 @@ public class BotController : MonoBehaviour
         if (gameManager.isGreenLightActive)
         {
             MoveLeft();
+            Speed = 1f;
+            animator.SetFloat("Speed", Speed);
             once = false;
         }
         else
@@ -36,7 +38,7 @@ public class BotController : MonoBehaviour
             if (chance > currenChanceValue)
             {
                 Speed = 1f;
-                //animator.SetFloat("Speed", Speed);
+                animator.SetFloat("Speed", Speed);
                 MoveLeft();
                 
             }
@@ -44,7 +46,7 @@ public class BotController : MonoBehaviour
             {
                 isMoving = false;
                 Speed = 0f;
-                //animator.SetFloat("Speed", Speed);
+                animator.SetFloat("Speed", Speed);
             }
         }
         if(gameManager.redLightActive==true && isMoving == true)

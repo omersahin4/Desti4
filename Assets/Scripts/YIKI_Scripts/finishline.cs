@@ -6,7 +6,7 @@ public class finishline : MonoBehaviour
 {
     public GameObject gameOverCanvas; // "Game Over" ekranýný temsil eden Canvas nesnesi
     public GameObject player; // Ana karakteriniz
-
+    public GameObject nextlevelbutton;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) // Eðer etkileþim yapan nesne "Player" tag'ine sahipse
@@ -15,6 +15,8 @@ public class finishline : MonoBehaviour
             // "Game Over" ekranýný aktif hale getir
             gameOverCanvas.SetActive(true);
             player.SetActive(false);
+            nextlevelbutton.SetActive(true);
+            Time.timeScale = 0f;
 
         }
     }
