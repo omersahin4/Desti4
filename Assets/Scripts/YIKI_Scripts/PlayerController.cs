@@ -6,9 +6,14 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public GameManager gameManager;
+    public float Speed = 0f;
+    public bool isMoving = false;  // Bu deðiþken hareket durumunu kontrol etmek için kullanýlýr.
+    private Animator animator;
 
-   public bool isMoving = false;  // Bu deðiþken hareket durumunu kontrol etmek için kullanýlýr.
-
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     private void Update()
     {
         HandleMovement();
@@ -22,11 +27,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isMoving = true;
+            Speed = 1f;
+            animator.SetFloat("Speed", Speed);
         }
         // Space tuþu býrakýldýðýnda hareket durur.
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isMoving = false;
+            Speed = 0f;
+            animator.SetFloat("Speed", Speed);  // Animator'daki "Speed" parametresini güncelle
         }
 
         if (isMoving)

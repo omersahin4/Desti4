@@ -22,11 +22,12 @@ public class GameManager : MonoBehaviour
     public bool redLightActive = false;
     public bool isGreenLightActive = false;
     private bool isPlayerAlive = true;
-   
+
+    
 
     private void Start()
     {
-
+        
         StartCoroutine(GameLoop());
     }
 
@@ -58,17 +59,18 @@ public class GameManager : MonoBehaviour
         redLightAnimator.SetBool("isTrue", true);
         yield return new WaitForSeconds(redLightDuration);
 
-        if (botController.isMoving==true)
+      /*  if (botController.isMoving==true)
         {
             Debug.Log("bot öldü");
             botController.Die();
         }
+      */
         if (isPlayerAlive && playerController != null && playerController.isMoving)
         {
             Debug.Log("öldün");
             PlayerDied();
         }
-
+        
     }
     public void BotDied()
     {

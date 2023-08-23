@@ -15,6 +15,6 @@ public class dollheadanim : MonoBehaviour
             targetEulerAngles.y = 180f; // Red light, rotate around y-axis by 180 degrees
         }
 
-        transform.eulerAngles = targetEulerAngles;
+        transform.eulerAngles = new Vector3(0f, targetEulerAngles.y + 180f, 0f);
     }
 }
