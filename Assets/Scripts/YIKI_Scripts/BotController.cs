@@ -10,17 +10,25 @@ public class BotController : MonoBehaviour
     private bool once = false;
     public float Speed = 0f;
     public bool isMoving = false;
-    [SerializeField] private int currenChanceValue;
+    [SerializeField] private int currentChanceValue;
     public float moveSpeed = 3f;
     public GameManager gameManager;
     public Animator animator;
-   
+
+    private bool isDead = false; // Yeni eklendi
+
     private void Start()
     {
         animator = GetComponent<Animator>();
     }
+
     private void Update()
     {
+        if (isDead) // Yeni eklendi
+        {
+            return; // Yeni eklendi, ölü botlar hareket etmeyecek
+        }
+
         if (gameManager.isGreenLightActive)
         {
             MoveLeft();
@@ -30,17 +38,16 @@ public class BotController : MonoBehaviour
         }
         else
         {
-            if(once == false)
+            if (once == false)
             {
-                currenChanceValue = Random.Range(1, 9);
+                currentChanceValue = Random.Range(1, 9);
                 once = true;
             }
-            if (chance > currenChanceValue)
+            if (chance > currentChanceValue)
             {
                 Speed = 1f;
                 animator.SetFloat("Speed", Speed);
                 MoveLeft();
-                
             }
             else
             {
@@ -49,28 +56,28 @@ public class BotController : MonoBehaviour
                 animator.SetFloat("Speed", Speed);
             }
         }
-        if(gameManager.redLightActive==true && isMoving == true)
+        if (gameManager.redLightActive == true && isMoving == true)
         {
-            
             Die();
         }
-
     }
 
     private void MoveLeft()
     {
-        
         isMoving = true;
         Vector3 movement = Vector3.left * moveSpeed * Time.deltaTime;
         transform.Translate(movement);
-        
     }
+
     public void Die()
     {
-        // Bot ölümü ile ilgili iþlemleri burada yapabilirsiniz
-        gameManager.BotDied();
-        
-        // gameObject.SetActive(false);
+        if (!isDead) // Yeni eklendi
+        {
+            isDead = true; // Yeni eklendi, botun öldüðünü iþaretler
+            gameObject.SetActive(false);
+            // Bot ölümü ile ilgili iþlemleri burada yapabilirsiniz
+            gameManager.BotDied();
+        }
     }
 
 }
