@@ -74,7 +74,7 @@ public class BotController : MonoBehaviour
         if (!isDead) // Yeni eklendi
         {
             isDead = true; // Yeni eklendi, botun öldüðünü iþaretler
-            gameObject.SetActive(false);
+            gameObject.SetActive(false); 
             // Bot ölümü ile ilgili iþlemleri burada yapabilirsiniz
             gameManager.BotDied();
         }

@@ -12,6 +12,9 @@ public class HalatKontrol : MonoBehaviour
 
     public Button sagaCekButton; // Saða çekme iþlemi için buton referansý
 
+    float aktifKuvvet;
+    float dusmanKuvveti = 1;
+
     private void Start()
     {
         // Butonun týklama olayýna çekme iþlemini ekle
@@ -20,9 +23,22 @@ public class HalatKontrol : MonoBehaviour
 
     private void Update()
     {
+        aktifKuvvet -= dusmanKuvveti * Time.deltaTime;
+        if (aktifKuvvet <= -1)
+        {
+            aktifKuvvet = -1;
+        }
+        if (aktifKuvvet >= 1)
+        {
+            aktifKuvvet = 1;
+        }
         float hareket = 0.0f;
-
-        if (týklamaYapýldý)
+        foreach (Rigidbody2D oyuncuRigidbody in oyuncuRigidbodyArray)
+        {
+            Vector2 oyuncuHareket = new Vector2(aktifKuvvet, oyuncuRigidbody.velocity.y);
+            oyuncuRigidbody.velocity = oyuncuHareket;
+        }
+        /*if (týklamaYapýldý)
         {
             hareket = hiz; // Týklama olduðunda saða hareket
 
@@ -40,13 +56,14 @@ public class HalatKontrol : MonoBehaviour
             {
                 oyuncuRigidbody.velocity = Vector2.zero;
             }
-        }
+        }*/
     }
 
     private void SagaCek()
     {
         // Saða çekme iþlemi
         týklamaYapýldý = true;
+        aktifKuvvet += 0.5f;
     }
 
     public void Býrak()
