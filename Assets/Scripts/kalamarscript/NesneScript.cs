@@ -7,6 +7,9 @@ public class NesneScript : MonoBehaviour
     public int maxTopSayisi = 3;
     private int alinanTopSayisi = 0;
 
+    public GameObject youwin;
+    public GameObject levelup;
+
     private void Start()
     {
         InvokeRepeating("SpawnNesne", 6f, 3f);
@@ -36,9 +39,12 @@ public class NesneScript : MonoBehaviour
     public void Alindi()
     {
         alinanTopSayisi++;
-        if (alinanTopSayisi >= maxTopSayisi)
+        Debug.Log("hamood");
+        if (alinanTopSayisi >= 1)
         {
             Debug.Log("Oyun Kazanýldý!");
+            levelup.SetActive(true);
+            youwin.SetActive(true);
         }
     }
 }

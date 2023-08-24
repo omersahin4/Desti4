@@ -5,11 +5,18 @@ public class OyuncuScript : MonoBehaviour
     public int can = 3;
     private bool canAzaldi = false;
     private bool oyunAktif = true; // Bu deðiþken oyunun aktif olup olmadýðýný kontrol eder.
+    public GameObject gameovercanvas;
+    public GameObject retrybutton;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     private void Update()
     {
         if (!oyunAktif)
         {
+            
             return; // Oyun pasifse, hiçbir þey yapma.
         }
 
@@ -43,6 +50,11 @@ public class OyuncuScript : MonoBehaviour
     {
         oyunAktif = false; // Oyunu pasifleþtir.
         Debug.Log("Oyunu kaybettin!");
+        gameovercanvas.SetActive(true);
+        retrybutton.SetActive(true);
+        Time.timeScale = 0f;
+
+
         // Burada oyunu yeniden baþlatmak veya baþka bir iþlem yapabilirsiniz.
     }
 }

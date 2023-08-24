@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4451320468816571991}
   - component: {fileID: 4674157244787599037}
   - component: {fileID: -4392695668807409169}
+  - component: {fileID: 8896119598365825019}
   m_Layer: 0
   m_Name: top
   m_TagString: Untagged
@@ -161,3 +162,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f9e659012461e45af2c5ff52b7581c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nesneScript: {fileID: 8896119598365825019}
+--- !u!114 &8896119598365825019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6131936543038404754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec21ab071cbd417448e825b0894eccac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nesnePrefab: {fileID: 0}
+  edgeCollider: {fileID: 0}
+  maxTopSayisi: 3
+  youwin: {fileID: 2096503426559471477, guid: 163bf523dbbd34947969c9d7bb67703a, type: 3}
+  levelup: {fileID: 2564259840334782982, guid: a5f0f1884b1e8494eb7687a7b5171217, type: 3}
