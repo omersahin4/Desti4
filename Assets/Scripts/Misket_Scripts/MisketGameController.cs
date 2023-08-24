@@ -9,39 +9,63 @@ public class MisketGameController : MonoBehaviour
     public Text scoreText;
     public Text messageText;
     public float maxBallSpeed = 10f;
-    public int targetScore = 6;
+    public int targetScore = 2;
+    public int maxThrows = 3;
     public float gameDuration = 10f;
     public MisketBall misketBall;
-    public GameObject retrybutton;
-    public GameObject gameovercanvas;
-    public GameObject wingamecanvas;
-    public GameObject levelupbutton;
+    public GameObject retryButton;
+    public GameObject gameOverCanvas;
+    public GameObject winGameCanvas;
+    public GameObject levelUpButton;
 
     private int score = 0;
+    private int throwsLeft = 3;
+    private int targetsHit = 0;
     private bool gameOver = false;
-    private bool secondThrow = false;
 
     private void Start()
     {
         messageText.gameObject.SetActive(false);
+        retryButton.SetActive(false);
+        winGameCanvas.SetActive(false);
+        levelUpButton.SetActive(false);
+        gameOverCanvas.SetActive(false);
+
         StartCoroutine(GameTimer());
         SpawnBall();
     }
 
     private void Update()
     {
-        if (!gameOver)
+        if (targetsHit == 2)
+        {
+            WinGame();
+        }
+        if (!gameOver && throwsLeft > 0)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 misketBall.Throw();
+                throwsLeft--;
+
+                if (throwsLeft == 0)
+                {
+                    if (targetsHit >= targetScore)
+                    {
+                        Debug.Log("kazandýn");
+                        WinGame();
+                    }
+                    else
+                    {
+                        LoseGame();
+                    }
+                }
             }
         }
     }
 
     private void SpawnBall()
     {
-        Debug.Log("test");
         GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.position, Quaternion.identity);
         MisketBall misketBallComponent = newBall.GetComponent<MisketBall>();
         misketBallComponent.SetGameController(this);
@@ -51,40 +75,38 @@ public class MisketGameController : MonoBehaviour
     {
         score += points;
         scoreText.text = "Score: " + score.ToString();
+        targetsHit++;
 
-        if (score >= targetScore)
+        if (targetsHit >= targetScore)
         {
             WinGame();
         }
-        else if (secondThrow)
-        {
-            LoseGame();
-        }
         else
         {
-            secondThrow = true;
-            messageText.text = "Second Throw";
+            // Atýþ hakkýný sýfýrla
+            
+            messageText.text = "Throws Left: " + throwsLeft.ToString();
         }
     }
 
     private void WinGame()
     {
+       
         gameOver = true;
         messageText.gameObject.SetActive(true);
         messageText.text = "You Win!";
-        Debug.Log("wingame");
-        gameovercanvas.SetActive(true);
-        retrybutton.gameObject.SetActive(true); 
+        winGameCanvas.SetActive(true);
+        levelUpButton.SetActive(true);
     }
 
     private void LoseGame()
     {
+        Debug.Log("kaybettin");
         gameOver = true;
         messageText.gameObject.SetActive(true);
         messageText.text = "Game Over";
-        Debug.Log("losegame");
-        wingamecanvas.SetActive(true);
-        levelupbutton.SetActive(true);
+        gameOverCanvas.SetActive(true);
+        retryButton.SetActive(true);
     }
 
     private IEnumerator GameTimer()
@@ -92,8 +114,6 @@ public class MisketGameController : MonoBehaviour
         yield return new WaitForSeconds(gameDuration);
         if (!gameOver)
         {
-            Debug.Log("Süre bitti");
-          
             LoseGame();
         }
     }
