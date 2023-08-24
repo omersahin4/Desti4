@@ -1,73 +1,73 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class DalgonaGameController : MonoBehaviour
+public class DalgonaGame : MonoBehaviour
 {
-    public GameObject krakerPrefab;      // Kraker objesinin prefabý
-    public Transform spawnPoint;         // Krakerin doðduðu nokta
-    public float clickInterval = 5.0f;    // Týklama aralýðý (saniye)
-    public int maxClicks = 100;           // Maksimum týklama sayýsý
+    public float gameDuration = 10f;
+    public int minTapsToWin = 8;
+    public int maxTapsToWin = 10;
     public GameObject winScreen;         // Kazandý ekraný
     public GameObject gameOverScreen;    // Oyun bitti ekraný
     public GameObject youwin;
+    public GameObject krakerPrefab;      // Kraker objesinin prefabý
+    public Transform spawnPoint;
+    public GameObject retrybutton;
 
-    private int clickCount = 0;
-    private float lastClickTime;
-    private bool isGameActive = true;
+    private bool isGameRunning = false;
+    private int taps = 0;
 
     private void Start()
     {
-        // Oyun baþladýðýnda nesneyi spawn et
         SpawnKraker();
+        StartGame();
     }
 
     private void Update()
     {
-        if (!isGameActive)
-            return;
-
-        if (Input.GetMouseButtonDown(0))
+        if (isGameRunning)
         {
-            HandleClick();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("týklandý");
+                taps++;
+            }
         }
     }
 
-    private void HandleClick()
+    private void StartGame()
     {
-        Debug.Log("týklandý");
-        if (clickCount < maxClicks && Time.time - lastClickTime >= clickInterval)
-        {
-            lastClickTime = Time.time;
-            clickCount++;
+        isGameRunning = true;
+        StartCoroutine(EndGameAfterDuration());
+    }
 
-            if (clickCount >= maxClicks)
-            {
-                EndGame();
-                Debug.Log("oyunu kaybettin");
-            }
-            else
-            {
-                Debug.Log("oyunu kazandýn");
-                WinGame();
-            }
-        }
+    private IEnumerator EndGameAfterDuration()
+    {
+        yield return new WaitForSeconds(gameDuration);
+
+        isGameRunning = false;
+        EndGame();
     }
 
     private void EndGame()
     {
-        isGameActive = false;
-        gameOverScreen.SetActive(true);
+        if (taps >= minTapsToWin && taps <= maxTapsToWin)
+        {
+            youwin.SetActive(true);
+            Debug.Log("Kazandýnýz!");
+            winScreen.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Kaybettiniz.");
+            gameOverScreen.SetActive(true);
+            retrybutton.SetActive(true);
+        }
     }
-
-    private void WinGame()
-    {
-        youwin.SetActive(true);
-        isGameActive = false;
-        winScreen.SetActive(true);
-    }
-
     private void SpawnKraker()
     {
         krakerPrefab.SetActive(true);  // Kraker prefabýný görünür yap
         Instantiate(krakerPrefab, spawnPoint.position, Quaternion.identity);
     }
 }
+
