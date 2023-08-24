@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class CarpismaKontrol : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Çarpýþma Algýlandý"); // Debug.Log mesajý ekle
+        Debug.Log("Tetikleyici Çakýþma Algýlandý");
 
-        if (collision.collider.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Oyuncu"))
         {
-            Debug.Log("Oyuncu ile Çarpýþma Algýlandý"); // Debug.Log mesajý ekle
-            Destroy(collision.collider.gameObject);
+            Debug.Log("Oyuncu ile Tetikleyici Çakýþma Algýlandý");
+            other.gameObject.SetActive(false);
+            OyunuBitir();
         }
+    }
+
+    private void OyunuBitir()
+    {
+        Debug.Log("Oyun Bitti!");
+        // Oyunun bittiðini iþaretlemek veya gerektiði baþka iþlemleri burada yapabilirsiniz.
     }
 }
