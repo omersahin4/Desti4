@@ -57,7 +57,7 @@ public class MisketGameController : MonoBehaviour
                     }
                     else
                     {
-                        LoseGame();
+                        StartCoroutine(DelayedLose());
                     }
                 }
             }
@@ -97,11 +97,22 @@ public class MisketGameController : MonoBehaviour
         messageText.text = "You Win!";
         winGameCanvas.SetActive(true);
         levelUpButton.SetActive(true);
+        gameOverCanvas.SetActive(false);
+        retryButton.SetActive(false);
+    }
+    private IEnumerator DelayedLose()
+    {
+        yield return new WaitForSeconds(1.0f); // Adjust the delay time as needed
+        if (!gameOver)
+        {
+            Debug.Log("kaybettin");
+            LoseGame();
+        }
     }
 
     private void LoseGame()
     {
-        Debug.Log("kaybettin");
+       
         gameOver = true;
         messageText.gameObject.SetActive(true);
         messageText.text = "Game Over";
@@ -114,7 +125,7 @@ public class MisketGameController : MonoBehaviour
         yield return new WaitForSeconds(gameDuration);
         if (!gameOver)
         {
-            LoseGame();
+            StartCoroutine(DelayedLose());
         }
     }
 }
