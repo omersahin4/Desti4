@@ -8,6 +8,7 @@ public class DalgonaGameController : MonoBehaviour
     public int maxClicks = 100;           // Maksimum týklama sayýsý
     public GameObject winScreen;         // Kazandý ekraný
     public GameObject gameOverScreen;    // Oyun bitti ekraný
+    public GameObject youwin;
 
     private int clickCount = 0;
     private float lastClickTime;
@@ -41,17 +42,14 @@ public class DalgonaGameController : MonoBehaviour
             if (clickCount >= maxClicks)
             {
                 EndGame();
-                krakerPrefab.SetActive(false);
                 Debug.Log("oyunu kaybettin");
             }
             else
             {
                 Debug.Log("oyunu kazandýn");
-                krakerPrefab.SetActive(false);
                 WinGame();
             }
         }
-
     }
 
     private void EndGame()
@@ -62,13 +60,14 @@ public class DalgonaGameController : MonoBehaviour
 
     private void WinGame()
     {
+        youwin.SetActive(true);
         isGameActive = false;
         winScreen.SetActive(true);
-        krakerPrefab.SetActive(false);
     }
 
     private void SpawnKraker()
     {
+        krakerPrefab.SetActive(true);  // Kraker prefabýný görünür yap
         Instantiate(krakerPrefab, spawnPoint.position, Quaternion.identity);
     }
 }
