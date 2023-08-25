@@ -19,6 +19,7 @@ public class DalgonaGame : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         SpawnKraker();
         StartGame();
     }
@@ -43,8 +44,9 @@ public class DalgonaGame : MonoBehaviour
 
     private IEnumerator EndGameAfterDuration()
     {
+        Debug.Log("TT");
         yield return new WaitForSeconds(gameDuration);
-
+        Debug.Log("RR");
         isGameRunning = false;
         EndGame();
     }

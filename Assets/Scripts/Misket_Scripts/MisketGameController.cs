@@ -25,6 +25,7 @@ public class MisketGameController : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         messageText.gameObject.SetActive(false);
         retryButton.SetActive(false);
         winGameCanvas.SetActive(false);
@@ -34,6 +35,7 @@ public class MisketGameController : MonoBehaviour
         StartCoroutine(GameTimer());
         SpawnBall();
     }
+   
 
     private void Update()
     {
