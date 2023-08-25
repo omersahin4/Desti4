@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class OyuncuScript : MonoBehaviour
 {
-    public int can = 3;
+    public int can = 1;
     private bool canAzaldi = false;
     private bool oyunAktif = true; // Bu deðiþken oyunun aktif olup olmadýðýný kontrol eder.
     public GameObject gameovercanvas;

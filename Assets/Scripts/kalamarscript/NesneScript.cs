@@ -45,6 +45,7 @@ public class NesneScript : MonoBehaviour
             Debug.Log("Oyun Kazanýldý!");
             levelup.SetActive(true);
             youwin.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }
