@@ -25,14 +25,14 @@ public class PlayerController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
 
         // Space tuþuna basýldýðýnda sola doðru hareket baþlar.
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             isMoving = true;
             Speed = 1f;
             animator.SetFloat("Speed", Speed);
         }
         // Space tuþu býrakýldýðýnda hareket durur.
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             isMoving = false;
             Speed = 0f;

@@ -7,7 +7,7 @@ public class KalamarGameManager : MonoBehaviour
 
     private void Start()
     {
-        SpawnToplar();
+        //SpawnToplar();
     }
 
     private void SpawnToplar()

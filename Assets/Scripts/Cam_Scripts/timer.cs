@@ -6,8 +6,8 @@ public class timer : MonoBehaviour
     public Text countdownText;
     public Slider timeSlider;
 
-    private float countdownValue = 10f;
-    private float currentTime = 10f;
+    private float countdownValue = 3f;
+    private float currentTime = 3f;
 
     private bool isCountingDown = true;
 
