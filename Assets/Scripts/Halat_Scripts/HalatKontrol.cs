@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class HalatKontrol : MonoBehaviour
 {
+    public GameObject halat_tutorial;
+
     public Transform halatBaslangic; // Halatýn baþlangýç noktasý
     public Rigidbody2D[] oyuncuRigidbodyArray; // Oyuncularýn Rigidbody bileþenleri
     public float hiz = 5.0f;
@@ -18,11 +20,18 @@ public class HalatKontrol : MonoBehaviour
     private void Start()
     {
         // Butonun týklama olayýna çekme iþlemini ekle
-        sagaCekButton.onClick.AddListener(SagaCek);
+        Time.timeScale = 0f;
     }
 
     private void Update()
     {
+        if (Input.GetMouseButtonUp(0))
+        {
+            Time.timeScale = 1f;
+            halat_tutorial.SetActive(false);
+            sagaCekButton.onClick.AddListener(SagaCek);
+        }
+
         aktifKuvvet -= dusmanKuvveti * Time.deltaTime;
         if (aktifKuvvet <= -1)
         {

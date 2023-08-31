@@ -17,6 +17,7 @@ public class CarpismaKontrol : MonoBehaviour
     private void OyunuBitir()
     {
         Debug.Log("Oyun Bitti!");
+        Time.timeScale = 0f;
         // Oyunun bittiðini iþaretlemek veya gerektiði baþka iþlemleri burada yapabilirsiniz.
     }
 }

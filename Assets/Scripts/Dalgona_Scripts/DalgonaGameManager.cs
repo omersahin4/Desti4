@@ -13,19 +13,26 @@ public class DalgonaGame : MonoBehaviour
     public GameObject krakerPrefab;      // Kraker objesinin prefabý
     public Transform spawnPoint;
     public GameObject retrybutton;
-
+    public GameObject dalgona_tutorial;
     private bool isGameRunning = false;
     private int taps = 0;
 
     private void Start()
     {
-        Time.timeScale = 1f;
-        SpawnKraker();
-        StartGame();
+        Time.timeScale = 0f;
+       
     }
 
     private void Update()
     {
+        if (!isGameRunning && Input.GetMouseButtonUp(0))
+        {
+            Time.timeScale = 1f;
+            dalgona_tutorial.SetActive(false);
+            SpawnKraker();
+            StartGame();
+        }
+
         if (isGameRunning)
         {
             if (Input.GetMouseButtonDown(0))

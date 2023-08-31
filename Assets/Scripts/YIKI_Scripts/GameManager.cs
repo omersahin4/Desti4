@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public BotController botController;
     public GameObject gameover;
     //public GameObject deadbody;
+    public GameObject yiki_tutorial;
 
     public float minGreenLightTime = 3f;
     public float maxGreenLightTime = 5f;
@@ -24,10 +25,20 @@ public class GameManager : MonoBehaviour
     private bool isPlayerAlive = true;
     public GameObject retryb;
     
+    
 
-    private void Start()
+    
+    private void Update()
     {
-        Time.timeScale = 1f;
+        if (Input.GetMouseButtonUp(0))
+        {
+            Time.timeScale = 1f;
+            yiki_tutorial.SetActive(false);
+        }
+    }
+    private void Start()
+    {      
+        Time.timeScale = 0f;
         StartCoroutine(GameLoop());
     }
 
