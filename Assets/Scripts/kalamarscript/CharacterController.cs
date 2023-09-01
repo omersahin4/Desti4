@@ -16,7 +16,7 @@ public class CharacterController : MonoBehaviour
             Debug.Log("Öldün!");
             isDead = true; // Karakter öldüðünü belirt
             deathText.SetActive(true); // Ölüm yazýsýný etkinleþtir
-
+            Time.timeScale = 0f;
             // Karakterin hareketini kontrol eden scripti devre dýþý býrak
             playerMovementScript.enabled = false;
 

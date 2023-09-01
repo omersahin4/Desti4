@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NesneScript : MonoBehaviour
 {
-    public GameObject nesnePrefab;
+   // public GameObject nesnePrefab;
     public EdgeCollider2D edgeCollider;
     public int maxTopSayisi = 3;
     private int alinanTopSayisi = 0;
@@ -10,8 +10,11 @@ public class NesneScript : MonoBehaviour
     public GameObject youwin;
     public GameObject levelup;
 
+    public OyuncuScript oyuncuScript;
+
     private void Start()
     {
+        
         InvokeRepeating("SpawnNesne", 6f, 3f);
     }
 
@@ -20,7 +23,7 @@ public class NesneScript : MonoBehaviour
         if (alinanTopSayisi < maxTopSayisi)
         {
             Vector2 spawnPosition = GetRandomSpawnPosition();
-            Instantiate(nesnePrefab, spawnPosition, Quaternion.identity);
+           // Instantiate(nesnePrefab, spawnPosition, Quaternion.identity);
         }
     }
 
@@ -46,6 +49,8 @@ public class NesneScript : MonoBehaviour
             levelup.SetActive(true);
             youwin.SetActive(true);
             Time.timeScale = 0f;
+            oyuncuScript.oyunbitti = true;
         }
+            oyuncuScript.oyunAktif = false;
     }
 }

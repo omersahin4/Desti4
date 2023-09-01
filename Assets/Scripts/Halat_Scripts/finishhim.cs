@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class finishhim : MonoBehaviour
 {
+    public bool oyunbitti = false;
     public GameObject gameovercanvas;
     public GameObject retrybutton;
     public GameObject wingame;
@@ -14,6 +15,7 @@ public class finishhim : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            oyunbitti = true;
             gameovercanvas.SetActive(true);
             retrybutton.SetActive(true);
             Debug.Log("kaybettin");
@@ -21,6 +23,7 @@ public class finishhim : MonoBehaviour
         }
         else if(other.CompareTag("Oyuncu"))
         {
+            oyunbitti = true;
             wingame.SetActive(true);
             youwin.SetActive(true);
             Debug.Log("kazandýn");

@@ -19,8 +19,18 @@ public class CamOyunuController : MonoBehaviour
     public GameObject retrynutton;
     public GameObject wingame;
     public GameObject levelupbutton;
+    public GameObject cam_tutorial;
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            Time.timeScale = 1f;
+            cam_tutorial.SetActive(false);
+        }
+    }
     private void Start()
     {
+        Time.timeScale = 0f;
         if (instance == null)
         {
             instance = this;

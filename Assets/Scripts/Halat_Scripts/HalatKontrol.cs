@@ -10,7 +10,8 @@ public class HalatKontrol : MonoBehaviour
     public float hiz = 5.0f;
     public float botHiz = 2.0f; // Botun hareket hýzý
 
-    private bool týklamaYapýldý = false; // Týklama yapýldýðýnda çekme baþlar
+    public finishhim finishim;
+    //private bool týklamaYapýldý = false; // Týklama yapýldýðýnda çekme baþlar
 
     public Button sagaCekButton; // Saða çekme iþlemi için buton referansý
 
@@ -25,7 +26,7 @@ public class HalatKontrol : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && finishim.oyunbitti==false)
         {
             Time.timeScale = 1f;
             halat_tutorial.SetActive(false);
@@ -41,7 +42,7 @@ public class HalatKontrol : MonoBehaviour
         {
             aktifKuvvet = 1;
         }
-        float hareket = 0.0f;
+       // float hareket = 0.0f;
         foreach (Rigidbody2D oyuncuRigidbody in oyuncuRigidbodyArray)
         {
             Vector2 oyuncuHareket = new Vector2(aktifKuvvet, oyuncuRigidbody.velocity.y);
@@ -71,14 +72,14 @@ public class HalatKontrol : MonoBehaviour
     private void SagaCek()
     {
         // Saða çekme iþlemi
-        týklamaYapýldý = true;
+        //týklamaYapýldý = true;
         aktifKuvvet += 0.5f;
     }
 
     public void Býrak()
     {
         // Çekmeyi durdur
-        týklamaYapýldý = false;
+        //týklamaYapýldý = false;
         foreach (Rigidbody2D oyuncuRigidbody in oyuncuRigidbodyArray)
         {
             oyuncuRigidbody.velocity = Vector2.zero; // Hýzý sýfýrla

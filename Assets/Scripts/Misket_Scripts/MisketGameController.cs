@@ -17,35 +17,53 @@ public class MisketGameController : MonoBehaviour
     public GameObject gameOverCanvas;
     public GameObject winGameCanvas;
     public GameObject levelUpButton;
+    public GameObject misket_tutorial;
 
     private int score = 0;
     private int throwsLeft = 3;
     private int targetsHit = 0;
     private bool gameOver = false;
 
+    private int once = 0;
     private void Start()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
+
         messageText.gameObject.SetActive(false);
         retryButton.SetActive(false);
         winGameCanvas.SetActive(false);
         levelUpButton.SetActive(false);
         gameOverCanvas.SetActive(false);
 
-        StartCoroutine(GameTimer());
-        SpawnBall();
+        
     }
    
-
+    private void starting()
+    {
+        if (once < 2)
+        {
+            StartCoroutine(GameTimer());
+            SpawnBall();
+            
+        }
+    }
     private void Update()
     {
-        if (targetsHit == 2)
+        if (Input.GetMouseButtonUp(0))
+        {
+            misket_tutorial.SetActive(false);
+            Time.timeScale = 1f;
+            once++;
+            starting();
+        }
+            if (targetsHit == 2)
         {
             WinGame();
         }
+
         if (!gameOver && throwsLeft > 0)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && once > 0)
             {
                 misketBall.Throw();
                 throwsLeft--;

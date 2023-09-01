@@ -11,13 +11,22 @@ public class kalamargamemanager : MonoBehaviour
     private int currentLives;
     private int collectedObjects;
 
+    public GameObject kalamar_tutorial;
     private void Start()
     {
         currentLives = startingLives;
         collectedObjects = 0;
+        
         SpawnObjects();
     }
-
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            Time.timeScale = 1f;
+            kalamar_tutorial.SetActive(false);
+        }
+    }
     private void SpawnObjects()
     {
         foreach (GameObject spawnPoint in spawnPoints)
